@@ -1,4 +1,4 @@
-''' Version 0.0.1 released February 2022
+''' Version 0.0.2 released February 2022
 No external modules currently required. Runs on Python versions 2.7 and 3.5 or above. '''
 
 
