@@ -1,4 +1,4 @@
-''' Version 0.0.2 released February 2022
+''' Version 0.0.3 released April 2022
 No external modules currently required. Runs on Python versions 2.7 and 3.5 or above. '''
 
 
@@ -17,7 +17,7 @@ shell = ["Storm", "Bubble", "Fractal"]
 shell_color = ["Blue", "Red", "Pink", "Magenta", "Turquoise", "Green", "Teal", "Cyan", "Orange", "Navy"]
 right_foot = ["Spikes", "Plates", "Boot", "Boot 2", "Rings", "Rings Gold", "Rings Pink", "Rings Green", "Rings Red", "Wrap", "Camo Wrap", "Wrap Red", "Wrap Blue", "Wrap Gold", "Wrap Green", "Boot Black"]
 left_foot = ["Spikes", "Plates", "Boot", "Boot 2", "Rings", "Rings Gold", "Rings Pink", "Rings Green", "Rings Red", "Wrap", "Camo Wrap", "Wrap Red", "Wrap Blue", "Wrap Gold", "Wrap Green", "Boot Black"]
-def main(equivalent):
+def main(equivalent, hands):
     my_head = r.choice(head_list)
     my_hair = r.choice(hair_list)
     my_torso = r.choice(torso)
@@ -27,7 +27,7 @@ def main(equivalent):
     else:
         my_other_shoulder = r.choice(left_shoulder)
     my_hand = r.choice(right_hand)
-    if equivalent == True:
+    if hands == True:
         my_other_hand = my_hand
     else:
         my_other_hand = r.choice(left_hand)
@@ -58,4 +58,4 @@ def main(equivalent):
     print("Flight aura color: ", my_color)
     print("Right foot: ", my_foot)
     print("Left foot: ", my_other_foot)
-main(equivalent=True)
+main(equivalent=True, hands=False)
