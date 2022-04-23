@@ -1,3 +1,4 @@
+
 head_list = ["Red Eye", "Blue Eye", "Yellow Eye", "Green Eye", "Red Shades", "Purple Shades", "Yellow Shades", "Shades", "Black Scarf", "Scarf and Shades", "Red Scarf"];
 hair_list = ["Long", "Goku", "Dreads", "Frizzy", "Conan", "Short", "Spikes", "Straight", "Wild", "Surfer", "Slick", "Messy", "Punk", "Santa"];
 torso = ["Ak-47 Ammo", "M16 Ammo", "Ak-47 Dual", "M16 Dual", "RPG Ammo", "Linkgun Ammo", "M79 Ammo", "Camo", "Camo 2", "Camo Ammo", "Camo 2 Ammo", "Tech 1", "Tech 2", "Tech 3", "Snow Camo", "Snow Camo RPG", "Shuriken", "Silver Chain", "Gold Chain", "White X", "Blue X", "Red X", "Green X", "Yellow X", "Purple Camo", "Fire Camo", "Aqua Camo", "Brown Camo"];
@@ -17,7 +18,7 @@ function choose(choices) {
   return choices[index];
 }
 
-function main(equivalent=true){
+function main(equivalent=true, hand=true){
     my_head = choose(head_list);
     my_hair = choose(hair_list);
     my_torso = choose(torso);
@@ -28,7 +29,7 @@ function main(equivalent=true){
         my_other_shoulder = choose(left_shoulder);
     }
     my_hand = choose(right_hand);
-    if (equivalent == true) {
+    if (hand == true) {
         my_other_hand = my_hand;
     } else {
         my_other_hand = r.choice(left_hand);
@@ -63,4 +64,4 @@ function main(equivalent=true){
     console.log("Right foot: ", my_foot);
     console.log("Left foot: ", my_other_foot);
 }
-main(equivalent=true);
+main(equivalent=true, hand=false);
