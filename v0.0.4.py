@@ -1,4 +1,4 @@
-''' Version 0.0.3 released April 2022
+''' Version 0.0.4 released April 26th, 2022
 No external modules currently required. Runs on Python versions 2.7 and 3.5 or above. '''
 
 
@@ -17,12 +17,12 @@ shell = ["Storm", "Bubble", "Fractal"]
 shell_color = ["Blue", "Red", "Pink", "Magenta", "Turquoise", "Green", "Teal", "Cyan", "Orange", "Navy"]
 right_foot = ["Spikes", "Plates", "Boot", "Boot 2", "Rings", "Rings Gold", "Rings Pink", "Rings Green", "Rings Red", "Wrap", "Camo Wrap", "Wrap Red", "Wrap Blue", "Wrap Gold", "Wrap Green", "Boot Black"]
 left_foot = ["Spikes", "Plates", "Boot", "Boot 2", "Rings", "Rings Gold", "Rings Pink", "Rings Green", "Rings Red", "Wrap", "Camo Wrap", "Wrap Red", "Wrap Blue", "Wrap Gold", "Wrap Green", "Boot Black"]
-def main(equivalent, hands):
+def main(shoulders=True, hands=True):
     my_head = r.choice(head_list)
     my_hair = r.choice(hair_list)
     my_torso = r.choice(torso)
     my_shoulder = r.choice(right_shoulder)
-    if equivalent == True:
+    if shoulders == True:
         my_other_shoulder = my_shoulder
     else:
         my_other_shoulder = r.choice(left_shoulder)
@@ -58,4 +58,4 @@ def main(equivalent, hands):
     print("Flight aura color: ", my_color)
     print("Right foot: ", my_foot)
     print("Left foot: ", my_other_foot)
-main(equivalent=True, hands=False)
+main()
