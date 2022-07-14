@@ -1,4 +1,4 @@
-''' Version 0.0.4 released April 26th, 2022
+''' Version 0.0.5 released April 26th, 2022
 No external modules currently required. Runs on Python versions 2.7 and 3.5 or above. '''
 
 
@@ -17,7 +17,7 @@ shell = ["Storm", "Bubble", "Fractal"]
 shell_color = ["Blue", "Red", "Pink", "Magenta", "Turquoise", "Green", "Teal", "Cyan", "Orange", "Navy"]
 right_foot = ["Spikes", "Plates", "Boot", "Boot 2", "Rings", "Rings Gold", "Rings Pink", "Rings Green", "Rings Red", "Wrap", "Camo Wrap", "Wrap Red", "Wrap Blue", "Wrap Gold", "Wrap Green", "Boot Black"]
 left_foot = ["Spikes", "Plates", "Boot", "Boot 2", "Rings", "Rings Gold", "Rings Pink", "Rings Green", "Rings Red", "Wrap", "Camo Wrap", "Wrap Red", "Wrap Blue", "Wrap Gold", "Wrap Green", "Boot Black"]
-def main(shoulders=True, hands=True):
+def main(shoulders=True, hands=True, feet=True):
     my_head = r.choice(head_list)
     my_hair = r.choice(hair_list)
     my_torso = r.choice(torso)
@@ -33,14 +33,14 @@ def main(shoulders=True, hands=True):
         my_other_hand = r.choice(left_hand)
     my_belt = r.choice(belt)
     my_leg = r.choice(right_leg)
-    if equivalent == True:
+    if feet == True:
         my_other_leg = my_leg
     else:
         my_other_leg = r.choice(left_leg)
     my_shell = r.choice(shell)
     my_color = r.choice(shell_color)
     my_foot = r.choice(right_foot)
-    if equivalent == True:
+    if feet == True:
         my_other_foot = my_foot
     else:
         my_other_foot = r.choice(left_foot)
